@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.homeScreen{
-margin-top: 0%;
+.homeScreen {
+    margin-top: 0%;
 }
-.nav{
+
+.nav {
     position: fixed;
-    top:0px;
+    top: 0px;
     padding: 20px;
     width: 100%;
     height: 75px;
@@ -18,44 +19,52 @@ margin-top: 0%;
     transition-timing-function: ease-in;
     transition: all 0.5s;
 }
-.nav_logo{
- position:fixed;
- left: 10px;
- width: 80px;
- object-fit: contain;
- 
- cursor: pointer;
+
+.nav_logo {
+    position: fixed;
+    left: 10px;
+    width: 80px;
+    object-fit: contain;
+
+    cursor: pointer;
 }
-.nav_content{
+
+.nav_content {
     display: flex;
     justify-content: space-between;
 }
-.nav_avatar{
-    position:fixed;
+
+.nav_avatar {
+    position: fixed;
     right: 20px;
     width: 30px;
     cursor: pointer;
 }
-.nav__black{
+
+.nav__black {
     background-color: black;
 }
-.banner{
+
+.banner {
     height: 448px;
     object-fit: contain;
     position: relative;
     color: white;
 }
-.banner_contents{
+
+.banner_contents {
     margin-left: 30px;
     padding-top: 140px;
     height: 190px;
 }
-.banner_title{
+
+.banner_title {
     font-weight: 800;
     font-size: 3rem;
     padding-bottom: 0.3rem;
 }
-.banner_discription{
+
+.banner_discription {
     width: 45rem;
     line-height: 1.3;
     padding-top: 1rem;
@@ -63,17 +72,17 @@ margin-top: 0%;
     max-width: 360px;
     height: 80px;
 }
-.banner_fadeBottom{
+
+.banner_fadeBottom {
     height: 7.4rem;
     margin-top: 140px;
-    background-image: linear-gradient(
-        180deg,
-        transparent,
-        rgba(37,37,37,0.61),
-        #111
-    );
+    background-image: linear-gradient(180deg,
+            transparent,
+            rgba(37, 37, 37, 0.61),
+            #111);
 }
-.banner_button{
+
+.banner_button {
     cursor: pointer;
     color: white;
     border: none;
@@ -85,33 +94,39 @@ margin-top: 0%;
     margin-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 00.5rem;
-    background-color: rgba(51,51,51,0.5);
+    background-color: rgba(51, 51, 51, 0.5);
 }
-.banner_button:hover{
+
+.banner_button:hover {
     color: #111;
     background-color: white;
     transition: all 0.2s;
 }
-.app{
+
+.app {
     background-color: #111;
 }
-.row{
-  color: white;
-  margin-left: 20px;  
+
+.row {
+    color: white;
+    margin-left: 20px;
 }
-.row_posters{
+
+.row_posters {
     /* Here ehat happens is overflow-y will be hidden and overflow-x will be scrollable which looks like in netflix  */
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
     padding: 20px;
 }
-.row_posters::-webkit-scrollbar{
+
+.row_posters::-webkit-scrollbar {
     /* This will hide the scroll bar which looks odds */
     display: none;
 
 }
-.row_poster{
+
+.row_poster {
     /* /maximum height will be 100 px in between that it will be scroolable */
     max-height: 100px;
     object-fit: contain;
@@ -119,15 +134,141 @@ margin-top: 0%;
     width: 100%;
     transition: transform 450ms;
 }
-.row_poster:hover{
+
+.row_poster:hover {
     transform: scale(1.08);
     opacity: 1;
 }
-.row_posterLarger{
+
+.row_posterLarger {
     max-height: 250px;
-    
+
 }
-.row_posterLarger:hover{
+
+.row_posterLarger:hover {
     transform: scale(1.09);
     opacity: 1;
+}
+
+.loginScreen {
+    position: relative;
+    height: 100%;   
+}
+
+.loginscreen_logo {
+    position: fixed;
+    left: 0;
+    object-fit: contain;
+}
+
+
+.loginScreen_button {
+    background-color: red;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+}
+
+.loginScreen_gradient {
+    width: 100%;
+    z-index: 1;
+    height: 100vh;
+    background: rgb(0, 0, 0.4);
+}
+.loginScreen__body > h1{
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+}
+.loginScreen__body > h2{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.loginScreen__body > h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.loginScreen__Input{
+    margin: 20px;
+}
+.loginScreen__Input > form> input{
+    padding: 10px;
+    outline-width: 0;
+    height: 54px;
+    width: 30%;
+    border: none;
+    max-width: 600px;
+    color: #111;
+}
+.loginScreen__getStarted{
+    background-color: red;
+    font-size: 1rem;
+    padding:16px 20px;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.loginScreen__body {
+    position: absolute;
+    padding: 20px;
+    top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    left: 0;
+    right: 0;
+}
+.signupScreen{
+max-width: fit-content;
+padding: 70px;
+margin-left: auto;
+margin-right: auto;
+background-color: rgb(7, 5, 5);
+}
+.signupScreen > form >button{
+    background-color: red;
+    padding: 16px 20px;
+    font-size:1rem;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none;
+}
+.signupScreen > form{
+    display: grid;
+    flex-direction: column;
+}
+.signupScreen > form > h1{
+    text-align:left;
+    margin-bottom: 20px;
+}
+.signupScreen > form > h4{
+    text-align:left;
+    margin-top: 20px;
+}
+.signupScreen > form > input{
+    outline-width: 0;
+    height: 40px;
+    border: none;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 15px;
+    color: #111;
+}
+.signupScreen_gray{
+    color: gray;
+}
+.signupScreen_link:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }

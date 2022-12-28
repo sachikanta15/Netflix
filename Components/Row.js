@@ -15,15 +15,16 @@ export default function Row({ title, fetchUrl, isLargeRow = false }) {
 
     return (
         <div className='row'>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             {/* Note: here row psoter and row posters are used to to scroll which scroll in horizontal direction and looks like netflix */}
             <div className='row_posters'>
                 {movies.map((movie) => (
+                    ((isLargeRow && movie.poster_path) || (!isLargeRow && movie.backdrop_path)) &&(
                     <img
                         className={`row_poster ${isLargeRow && "row_posterLarger"}`}
                         key={movie.id}
                         src={`${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}`} alt={movie.name} />
-                ))}
+                )))}
             </div>
         </div>
     )
