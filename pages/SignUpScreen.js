@@ -9,12 +9,10 @@ function SignupScreen() {
   const passwordRef = useRef(null);
 
   const register = (e) => {
-    e.preventDeafult();
-    auth
-      .createUserWithEmailAndPassword(
+    e.preventDefault();
+   auth.createUserWithEmailAndPassword(
         emailRef.current.value,
         passwordRef.current.value,
-        alert("User is Created")
       )
       .then((authUser) => {
         console.log(authUser)
@@ -27,6 +25,17 @@ function SignupScreen() {
 
   const signIn = (e) => {
     e.preventDeafult();
+
+    auth.signInWithEmailAndPassword(
+        emailRef.current.value,
+        passwordRef.current.value,
+      )
+      .then((authUser) => {
+        console.log(authUser);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
 
 

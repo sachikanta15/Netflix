@@ -1,6 +1,7 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore/lite';
-import { getAuth } from "firebase/auth";
+// v9 compat packages are API compatible with v8 code
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 
 
@@ -16,10 +17,10 @@ const firebaseConfig = {
   };
 
   // here we will initialize the firebase app
-
-  const firebaseApp = initializeApp(firebaseConfig);
-  const db = getFirestore(firebaseApp);
-  const auth = getAuth(firebaseApp);
+  
+  const firebaseApp = firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  const auth = firebase.auth();
 
 
   //Note: to export he data we have deafult export and explicite export because we had one deafult export and many explicite export
