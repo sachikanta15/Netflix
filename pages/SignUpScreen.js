@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { auth } from './firebase';
 
 
-function SignupScreen() {
+function SignUpScreen() {
 
   //this will store all the ref what user type
   const emailRef = useRef(null)
@@ -33,9 +33,8 @@ function SignupScreen() {
       .then((authUser) => {
         console.log(authUser);
       })
-      .catch((error) => {
-        alert(error.message);
-      });
+      .catch((error) => 
+        alert(error.message));
   };
 
 
@@ -43,6 +42,7 @@ function SignupScreen() {
     <div className='signupScreen'>
       <form >
         <h1>Sign In</h1>
+      
         <input ref={emailRef} type="Email" placeholder="Email Address" />
         <input ref={passwordRef} type="password" placeholder="Password" />
         <button type="submit" onClick={signIn}>Sign In</button>
@@ -54,4 +54,4 @@ function SignupScreen() {
   )
 }
 
-export default SignupScreen
+export default SignUpScreen;

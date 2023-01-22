@@ -4,8 +4,9 @@ import  userSliceReducer  from './Slices/userSlice'
 
 const makeStore =()=> configureStore({
   reducer:{
-    users:userSliceReducer
+    user:userSliceReducer
   },
   devTools:true
 });
+
 export const wrapper =createWrapper(makeStore);

@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const userSlice =createSlice({
-    name:'users',
+
+    name:"user",
     initialState:{
         user:null,
     },
@@ -17,5 +18,5 @@ export const userSlice =createSlice({
 
 export const {login,logout}=userSlice.actions;  /// actions helps tpo send the data to the store
 
-export const selectUser = state =>state.users.user;  // selectors helps to bring back the data from the store
+export const selectUser = state =>state.user.user;  // selectors helps to bring back the data from the store
 export default userSlice.reducer;
