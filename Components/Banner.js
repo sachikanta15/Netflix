@@ -1,10 +1,12 @@
 import axios from "../pages/api/axios";
 import requests from "../pages/api/request"
 import React, { useEffect, useState } from 'react'
+import {FaPlay } from "react-icons/ai"
+import { useRouter } from 'next/router';
 
 export default function Banner() {
 
-
+  const router = useRouter();
   const [movie,setMovie]= useState([]);
 
   useEffect(()=>{
@@ -40,7 +42,7 @@ fetchData();
         {movie?.name || movie?.title || movie?.original_name}
         </h1>
         <div className='banner_buttons'>
-          <button className='banner_button'>Play</button>
+          <button className='banner_button' onClick={() => router.push('/videoPlayer')}>Play</button>
           <button className='banner_button'>My List</button>
         </div>
         <h1 className='banner_discription'>{turncate(movie?.overview,250)}</h1>
